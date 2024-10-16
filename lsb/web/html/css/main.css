@@ -1,0 +1,17 @@
+@import "./typography.css";
+@import "./colors.css";
+@import "./reset.css";
+@import "./pseudo.css";
+
+html,
+body {
+  font-size: 16px;
+}
+
+body {
+  padding: 1rem;
+}
+
+section {
+  padding: 0.5rem 1rem;
+}

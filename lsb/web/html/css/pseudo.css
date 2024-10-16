@@ -1,0 +1,39 @@
+section * {
+  padding-inline-start: 0.5rem;
+}
+
+p::first-letter {
+  font-size: 24px;
+}
+
+a:hover {
+  color: rgb(242, 255, 0);
+}
+
+a[title] {
+  color: blue;
+  text-decoration: underline;
+}
+
+a[target="_blank"] {
+  color: red;
+}
+/*Descendente: elementos que estão dentro*/
+div a {
+  color: green;
+}
+
+/*filho: elementos diretos ao pai*/
+div > a {
+  color: orange;
+}
+
+/*irmão: elementos que estão dentro*/
+div ~ a {
+  color: purple;
+}
+
+/*irmão adjacente: elementos que estão dentro*/
+div + a {
+  color: brown;
+}

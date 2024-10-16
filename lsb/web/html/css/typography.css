@@ -1,0 +1,29 @@
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sans-serif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.cursive {
+  font-family: "Comic Sans MS", "Brush Script MT", cursive;
+}
+
+.fantasy {
+  font-family: "Impact", "Papyrus", fantasy;
+}
+
+h1 {
+  font-size: 64px;
+  color: black;
+}
+
+h2 {
+  color: black;
+  padding-block-end: 0.75rem;
+}
