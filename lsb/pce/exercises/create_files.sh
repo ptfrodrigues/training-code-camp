@@ -1,13 +1,23 @@
 #!/bin/bash
-DIR="01_pce_pl03"
-FILE="pl03"
-mkdir -p "$DIR"
 
-# Loop from 1 to 10 to create files with zero-padded numbers
-for i in $(seq -w 1 10); do
-    filename="$FILE_$i.c"
-    touch "$DIR/$filename"
+if [ -z "$1" ]; then
+  echo "Uso: ./create-script.sh nome_da_pasta"
+  exit 1
+fi
+
+folder_name="$1"
+
+mkdir -p "$folder_name"
+
+sequence=$(echo "$folder_name" | grep -oE 'pl[0-9]{2}')
+
+if [ -z "$sequence" ]; then
+  echo "Nome da pasta inválido. Deve estar no formato: 01_pce_plXX"
+  exit 1
+fi
+
+for i in {01..09}; do
+  touch "$folder_name/${sequence}_0$i.c"
 done
 
-# Correct echo message to reflect the correct prefix
-echo "Files pl03_01.c to pl03_10.c have been created."
+echo "Pasta '$folder_name' e arquivos ${sequence}_01.c a ${sequence}_09.c criados com sucesso!"

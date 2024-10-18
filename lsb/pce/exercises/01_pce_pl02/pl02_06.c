@@ -1,5 +1,19 @@
 #include <stdio.h>
 
+char to_lowercase(char ch) {
+    if (ch >= 'A' && ch <= 'Z') {
+        return ch + 32;
+    }
+    return ch;
+}
+
+char to_uppercase(char ch) {
+    if (ch >= 'a' && ch <= 'z') {
+        return ch - 32;
+    }
+    return ch;
+}
+
 void calculate_switch(int number, int option) {
     switch (option) {
         case 1:
